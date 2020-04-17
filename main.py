@@ -67,7 +67,7 @@ def handle_turn(player):
   position=int(position)-1
   board[position]=player
   list.append(position+1)
-  -
+  
   display_board()
 
 
@@ -127,8 +127,8 @@ def check_columns():
   global game_still_going
   # to set up the global variable in order to convert it into the instance v ariable being used by this function 
   #check if any of the rows is equal;
-  column_1=board[0]==board[3]==board[5]!='-'
-  column_2=board[1]==board[4]==board[6]!='-'
+  column_1=board[0]==board[3]==board[6]!='-'
+  column_2=board[1]==board[4]==board[7]!='-'
   column_3=board[2]==board[5]==board[8]!='-'
   if column_1 or column_2 or column_3:
     game_still_going=False
